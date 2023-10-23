@@ -2,5 +2,5 @@
 
 Record Leetcode Practice from Oct 21, 2023, previous practices are not include in this repo
 
-- Leetcode 4/75
+- Leetcode 6/75
 
