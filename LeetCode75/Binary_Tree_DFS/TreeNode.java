@@ -1,4 +1,4 @@
-package Binary_Tree_DFS;
+package LeetCode75.Binary_Tree_DFS;
 
 public class TreeNode {
     int val;

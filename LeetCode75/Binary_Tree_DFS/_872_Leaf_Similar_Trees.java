@@ -1,4 +1,4 @@
-package Binary_Tree_DFS;
+package LeetCode75.Binary_Tree_DFS;
 
 //https://leetcode.com/problems/leaf-similar-trees/?envType=study-plan-v2&envId=leetcode-75
 
