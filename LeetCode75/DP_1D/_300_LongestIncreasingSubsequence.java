@@ -1,4 +1,4 @@
-package LeetCode75.DP;
+package LeetCode75.DP_1D;
 
 //https://leetcode.com/problems/longest-increasing-subsequence/?envType=study-plan-v2&envId=top-interview-150
 public class _300_LongestIncreasingSubsequence {

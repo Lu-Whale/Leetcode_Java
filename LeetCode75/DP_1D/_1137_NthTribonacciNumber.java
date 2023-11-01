@@ -1,4 +1,4 @@
-package LeetCode75.DP;
+package LeetCode75.DP_1D;
 
 //https://leetcode.com/problems/n-th-tribonacci-number/?envType=study-plan-v2&envId=leetcode-75
 public class _1137_NthTribonacciNumber {

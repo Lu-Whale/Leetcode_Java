@@ -1,4 +1,4 @@
-package LeetCode75.DP;
+package LeetCode75.DP_1D;
 
 //https://leetcode.com/problems/house-robber/description/?envType=study-plan-v2&envId=leetcode-75
 public class _198_House_Robber {
