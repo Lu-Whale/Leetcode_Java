@@ -1,6 +1,10 @@
 package LeetCode75.DP_Mutidimensional;
 
 //https://leetcode.com/problems/unique-paths/?envType=study-plan-v2&envId=leetcode-75
+
+/**
+ * Key: The robot can only move either down or right at any point in time.
+ */
 public class _62_Unique_Paths {
     public int uniquePaths(int m, int n) {
         int[][] dp = new int[m][n];

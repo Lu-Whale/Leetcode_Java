@@ -13,8 +13,6 @@ public class _746_MinCostClimbingStairs {
             dp[i] = cost[i]+ Math.min(dp[i-1], dp[i-2]);
         }
 
-        int result = Math.min(dp[cost.length - 1], dp[cost.length - 2]);
-
-        return result;
+        return Math.min(dp[cost.length - 1], dp[cost.length - 2]);
     }
 }
