@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class name_generator {
+public class Name_Generator {
     private static String generator(String s) {
         StringBuilder stringBuilder = new StringBuilder("_");
 
