@@ -66,7 +66,7 @@ public class 二叉树的右视图199 {
                     if(treeNode.right != null) {
                         queue.offer(treeNode.right);
                     }
-
+                    //遍历到这行最后一个节点时把他加到result里
                     if(i == size - 1) {
                         result.add(treeNode.val);
                     }

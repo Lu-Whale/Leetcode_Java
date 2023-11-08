@@ -29,3 +29,23 @@
   - int[ ] dp = new int[n + 2];
 - Transtion Equation could be more than one, depending on different situation need to be considered.
   - Refer to 1143, there are two parts to the transition equation, depending on whether the current characters being considered are the same or not.
+
+## Binary Search
+
+### Handling boundary conditions properly in binary search is crucial to avoid infinite loops or missing the target element. Here are some key points to consider:
+
+1. Loop Condition:
+   - Binary search is typically performed within a while (left <= right) loop. Using < instead of <= can cause a failure to find edge elements.
+   - At the end of the search, left will be greater than right, which indicates that the search space is empty.
+2. Midpoint Calculation:
+   - Correctly calculating the midpoint can prevent integer overflow, such as int mid = left + (right - left) / 2;.
+3. Narrowing Down the Search Space:
+   - When the target is less than the value at mid, i.e., target < array[mid], adjust the right boundary to mid - 1.
+   - When the target is greater than the value at mid, i.e., target > array[mid], adjust the left boundary to mid + 1.
+   - If you're dealing with a standard binary search problem to find an exact value, when target == array[mid], you can return mid or proceed as necessary.
+4. Return Condition:
+   - If the target value is found in the array, return its index.
+   - If the loop ends (i.e., left > right), it indicates that the target value is not in the array, and depending on the function's expectation, you can return a special value, such as -1 or null.
+5. Handling Special Cases:
+   - Special cases when the array is empty or has only one element.
+   - Handling when the target value is less than all elements in the array or greater than all of them.
