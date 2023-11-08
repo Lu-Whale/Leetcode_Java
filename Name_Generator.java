@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * Run and paste name copied from leetcode website, then copy the result as the java file name
+ */
 public class Name_Generator {
     private static String generator(String s) {
         StringBuilder stringBuilder = new StringBuilder("_");
