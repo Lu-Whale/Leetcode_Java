@@ -2,6 +2,18 @@ package LeetCode75.Binary_Tree_DFS;
 
 //https://leetcode.com/problems/maximum-depth-of-binary-tree/description/?envType=study-plan-v2&envId=leetcode-75
 
+//class TreeNode {
+//    int val;
+//    TreeNode left;
+//    TreeNode right;
+//    TreeNode() {}
+//    TreeNode(int val) { this.val = val; }
+//    TreeNode(int val, TreeNode left, TreeNode right) {
+//        this.val = val;
+//        this.left = left;
+//        this.right = right;
+//    }
+//}
 public class _104_MaximumDepthofBinaryTree {
     public int maxDepth(TreeNode root) {
         if(root == null) return 0;
