@@ -1,4 +1,4 @@
-# Leetcode
+## Lucas's Leetcode Practice record 😊
 
 - ✅ I made a java file name generator in the root directory which used to generate the java file name (Since I always copy the problem name from Leetcode and used it as a file name, but it contains space or illegal characters) Feel free to use it :)
 
@@ -12,7 +12,7 @@
 
 ## Dynamic Programing (DP):
 
-### When solving Dynamic Programming (DP) problems, it is usually necessary to follow a series of steps. The following is the general logic for solving DP problems:
+#### When solving Dynamic Programming (DP) problems, it is usually necessary to follow a series of steps. The following is the general logic for solving DP problems:
 
 1. Define the Problem: First, clearly define the problem, including what the input and output of the problem are and how to measure the optimization goal of the problem. This step typically involves breaking down the original problem into **smaller subproblems** to make it manageable.
 2. Find Optimal Substructure: Determine if the problem exhibits the property of optimal substructure, where the optimal solution of the problem can be constructed from **the optimal solutions of its subproblems**. This is a key feature of DP problems.
@@ -30,7 +30,7 @@
 
 ## Binary Search
 
-### Handling boundary conditions properly in binary search is crucial to avoid infinite loops or missing the target element. Here are some key points to consider:
+#### Handling boundary conditions properly in binary search is crucial to avoid infinite loops or missing the target element. Here are some key points to consider:
 
 1. Loop Condition:
    - Binary search is typically performed within a while (left <= right) loop. Using < instead of <= can cause a failure to find edge elements.
@@ -50,7 +50,7 @@
 
 ## Priority Queue
 
-### An unbounded priority queue based on a priority heap. The elements of the priority queue are ordered according to their natural ordering, or by a Comparator provided at queue construction time, depending on which constructor is used. A priority queue does not permit null elements. A priority queue relying on natural ordering also does not permit insertion of non-comparable objects (doing so may result in ClassCastException).
+#### An unbounded priority queue based on a priority heap. The elements of the priority queue are ordered according to their natural ordering, or by a Comparator provided at queue construction time, depending on which constructor is used. A priority queue does not permit null elements. A priority queue relying on natural ordering also does not permit insertion of non-comparable objects (doing so may result in ClassCastException).
 
 1. `PriorityQueue()`
    - Creates a PriorityQueue with the default initial capacity (11) that orders its elements according to their natural ordering.
@@ -101,3 +101,12 @@ Or if you are sorting based on an attribute of an object, you can use the Compar
 PriorityQueue<Person> personPriorityQueue = new PriorityQueue<>(Comparator.comparing(Person::getAge));
 ```
 Here, the PriorityQueue will sort Person objects based on their age. A Person with a lower age returned by the getAge method will be considered to have a higher priority in the queue.
+
+## Merge sort
+#### Merge sort is a divide-and-conquer algorithm, Here's a simple explanation of how it works:
+
+1. Divide: The array is divided into two halves (subarrays).
+2. Conquer: Each half is sorted recursively using merge sort, breaking down the subarrays until they are small enough to be considered sorted (arrays of one element are always sorted).
+3. Combine: The sorted subarrays are merged together to form a single, sorted array.
+
+[148. Sort List](Problem_List/_148_Sort_List.java) is a problem solved by merge sort
