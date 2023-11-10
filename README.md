@@ -46,3 +46,14 @@
 5. Handling Special Cases:
    - Special cases when the array is empty or has only one element.
    - Handling when the target value is less than all elements in the array or greater than all of them.
+
+## Priority Queue
+
+### An unbounded priority queue based on a priority heap. The elements of the priority queue are ordered according to their natural ordering, or by a Comparator provided at queue construction time, depending on which constructor is used. A priority queue does not permit null elements. A priority queue relying on natural ordering also does not permit insertion of non-comparable objects (doing so may result in ClassCastException).
+
+1. PriorityQueue()
+   - Creates a PriorityQueue with the default initial capacity (11) that orders its elements according to their natural ordering.
+2. PriorityQueue(Comparator<? super E> comparator)
+   - Creates a PriorityQueue with the default initial capacity and whose elements are ordered according to the specified comparator.
+3. PriorityQueue(int initialCapacity, Comparator<? super E> comparator)
+   - Creates a PriorityQueue with the specified initial capacity that orders its elements according to the specified comparator.
