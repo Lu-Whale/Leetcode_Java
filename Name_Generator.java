@@ -8,11 +8,15 @@ public class Name_Generator {
         StringBuilder stringBuilder = new StringBuilder("_");
 
         for(int i = 0; i < s.length(); i++) {
-            if(s.charAt(i) == ' ' || s.charAt(i) == '-') {
+            if(s.charAt(i) == ' ' || s.charAt(i) == '-' || s.charAt(i) == '(' || s.charAt(i) == ')') {
                 stringBuilder.append('_');
             }else if(s.charAt(i) != '.') {
                 stringBuilder.append(s.charAt(i));
             }
+        }
+
+        if(stringBuilder.charAt(stringBuilder.length() - 1) == '_') {
+            stringBuilder.deleteCharAt(stringBuilder.length() -1);
         }
 
         return stringBuilder.toString();
