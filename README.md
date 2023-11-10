@@ -51,9 +51,52 @@
 
 ### An unbounded priority queue based on a priority heap. The elements of the priority queue are ordered according to their natural ordering, or by a Comparator provided at queue construction time, depending on which constructor is used. A priority queue does not permit null elements. A priority queue relying on natural ordering also does not permit insertion of non-comparable objects (doing so may result in ClassCastException).
 
-1. PriorityQueue()
+1. `PriorityQueue()`
    - Creates a PriorityQueue with the default initial capacity (11) that orders its elements according to their natural ordering.
-2. PriorityQueue(Comparator<? super E> comparator)
+2. `PriorityQueue(Comparator<? super E> comparator)`
    - Creates a PriorityQueue with the default initial capacity and whose elements are ordered according to the specified comparator.
-3. PriorityQueue(int initialCapacity, Comparator<? super E> comparator)
+3. `PriorityQueue(int initialCapacity, Comparator<? super E> comparator)`
    - Creates a PriorityQueue with the specified initial capacity that orders its elements according to the specified comparator.
+
+Example of how to use lambda expressions to define ascending (min-heap) and descending (max-heap) order for a PriorityQueue:
+
+- #### Ascending Order (Min-Heap):
+   `PriorityQueue<Integer> minHeap = new PriorityQueue<>((a, b) -> a - b);`
+- #### Descending Order (Max-Heap):
+   `PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);`
+
+### Comparator
+
+In Java, the return value of the compare method in a Comparator defines the ordering relationship between two objects. The signature of the compare method is as follows:
+
+`int compare(T o1, T o2);`
+
+Here, o1 and o2 are the objects to be compared, and T is the type of the objects. The method returns an integer that has three possible outcomes:
+
+1. Negative Number: If the return value is negative, it indicates that the first argument o1 is "less than" the second argument o2. In sorting structures, o1 should appear before o2.
+2. Zero: If the return value is zero, it indicates that the two arguments are considered equal. In most sorting structures, this means their order is not significant, and they can be interchanged without affecting the sort order.
+3. Positive Number: If the return value is positive, it indicates that the first argument o1 is "greater than" the second argument o2. In sorting structures, o1 should appear after o2.
+
+When you use a Comparator in sorting structures like PriorityQueue or Collections.sort(), the internal sorting algorithms of these structures use the compare method to determine the order of elements. For example:
+```
+PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(new Comparator<Integer>() {
+   @Override
+   public int compare(Integer a, Integer b) {
+      return a - b; // Negative if a < b, zero if a == b, positive if a > b
+   }
+});
+```
+In this example, we create a PriorityQueue where the elements are Integers. We provide a Comparator that defines the ordering between integers by simply subtracting a from b. This Comparator will cause the queue to sort the integers in ascending order (the smallest element has the highest priority).
+
+In Java 8 and above, Comparator creation is often done using lambda expressions or method references for more concise code:
+
+```
+// Using a lambda expression to define a Comparator
+PriorityQueue<Integer> priorityQueue = new PriorityQueue<>((a, b) -> a - b);
+```
+Or if you are sorting based on an attribute of an object, you can use the Comparator.comparing method:
+```
+// Assuming the Person class has a method getAge
+PriorityQueue<Person> personPriorityQueue = new PriorityQueue<>(Comparator.comparing(Person::getAge));
+```
+Here, the PriorityQueue will sort Person objects based on their age. A Person with a lower age returned by the getAge method will be considered to have a higher priority in the queue.
