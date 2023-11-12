@@ -9,8 +9,8 @@ public class _208_Implement_Trie_Prefix_Tree {
 
 class Trie {
 
-    private Trie[] children;
-    private boolean isEnd;
+    Trie[] children;
+    boolean isEnd;
 
     public Trie() {
         children = new Trie[26];
@@ -38,6 +38,7 @@ class Trie {
     }
 
     public boolean startsWith(String prefix) {
+
         return searchPrefix(prefix) != null;
     }
 
