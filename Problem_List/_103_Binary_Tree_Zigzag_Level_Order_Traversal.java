@@ -11,6 +11,8 @@ public class _103_Binary_Tree_Zigzag_Level_Order_Traversal {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
 
+        // Can also use deque
+
         //use boolean check and stack to traversal
         boolean traversal = true;
         while (!queue.isEmpty()) {
