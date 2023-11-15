@@ -27,6 +27,8 @@
   - int[ ] dp = new int[n + 2];
 - Transtion Equation could be more than one, depending on different situation need to be considered.
   - Refer to 1143, there are two parts to the transition equation, depending on whether the current characters being considered are the same or not.
+### Example Problem
+  - [300. Longest Increasing Subsequence](LeetCode75/DP_1D/_300_LongestIncreasingSubsequence.java)
 
 ## Binary Search
 
@@ -108,5 +110,6 @@ Here, the PriorityQueue will sort Person objects based on their age. A Person wi
 1. Divide: The array is divided into two halves (subarrays).
 2. Conquer: Each half is sorted recursively using merge sort, breaking down the subarrays until they are small enough to be considered sorted (arrays of one element are always sorted).
 3. Combine: The sorted subarrays are merged together to form a single, sorted array.
+
 
 [148. Sort List](Problem_List/_148_Sort_List.java) is a problem solved by merge sort
