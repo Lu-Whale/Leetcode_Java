@@ -111,5 +111,32 @@ Here, the PriorityQueue will sort Person objects based on their age. A Person wi
 2. Conquer: Each half is sorted recursively using merge sort, breaking down the subarrays until they are small enough to be considered sorted (arrays of one element are always sorted).
 3. Combine: The sorted subarrays are merged together to form a single, sorted array.
 
+### Example Problem
+[148. Sort List](Problem_List/_148_Sort_List.java) 
 
-[148. Sort List](Problem_List/_148_Sort_List.java) is a problem solved by merge sort
+## Deep First Search
+
+#### Follow these steps to develop when try to solve depth-first search (DFS) algorithm problems:
+
+1. Understand the Problem: First, fully understand the requirements and objectives of the problem. This might involve traversing a graph, finding paths, solving puzzles, etc.
+2. Decide on Graph Representation: Based on the needs of the problem, decide how to represent the graph. This could be an adjacency matrix, adjacency list, or other forms.
+3. Design the DFS Recursive Function: Write a recursive function to perform DFS. Common elements to consider include:
+   - Visited Marking: To mark nodes that have been visited to prevent revisiting.
+   - Path Recording: If needed, record the path from the starting point to the current node.
+   - Termination Condition: Decide when to stop the recursion.
+4. Handle Special Cases: Consider and handle special cases in the graph, such as cycles, disconnected components, or other specific requirements.
+5. Recursive Traversal: Start the DFS from one or multiple starting points and recursively traverse the graph.
+6. Collect and Return Results: If the problem requires returning specific results, ensure these are correctly collected during the recursion.
+7. Optimization and Debugging:
+   - Check for any possible optimizations, such as pruning conditions, to reduce unnecessary recursive calls.
+   - Debug the code to ensure it handles various test cases correctly.
+8. Code Review and Refactoring: Finally, review the code to ensure clarity and efficiency. If necessary, refactor to improve the readability and performance of the code.
+
+### Tips:
+
+1. When using a variable to track a global maximum or minimum in a recursive function, there are typically two approaches:
+   - Global Variable: Define a class-level variable (like maxLen). This variable remains constant throughout all recursive calls and can be updated and accessed accordingly.
+   - Function Parameter: By passing the current maximum as a parameter to the recursive function and then returning the updated maximum. 
+
+### Example Problem
+[1372. Longest ZigZag Path in a Binary Tree](LeetCode75/Binary_Tree_DFS/_1372_Longest_ZigZag_Path_in_a_Binary_Tree.java)
