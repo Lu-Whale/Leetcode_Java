@@ -140,3 +140,18 @@ Here, the PriorityQueue will sort Person objects based on their age. A Person wi
 
 ### Example Problem
 [1372. Longest ZigZag Path in a Binary Tree](LeetCode75/Binary_Tree_DFS/_1372_Longest_ZigZag_Path_in_a_Binary_Tree.java)
+
+## Backtracking
+
+#### Backtracking used for finding solutions to problems incrementally, one step at a time, and removing those solutions that fail to satisfy the constraints of the problem at any point of time.
+How backtracking works:
+1. Choose: 
+   - Start by choosing an option at a decision point.
+2. Constraint Check: 
+   - After making a choice, check if the current partial solution satisfies the problem's constraints. If it violates any constraint, discard this partial solution and backtrack (i.e., return to the previous step).
+3. Goal Check: 
+   - Check if the current solution satisfies the goal of the problem. If it does, return this solution.
+4. Recursion: 
+   - If the current partial solution neither violates the constraints nor satisfies the goal, recursively apply these steps to extend the solution further.
+5. Backtrack: 
+   - If none of the options work out, backtrack to the previous decision point and try a different path.
