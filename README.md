@@ -155,3 +155,6 @@ How backtracking works:
    - If the current partial solution neither violates the constraints nor satisfies the goal, recursively apply these steps to extend the solution further.
 5. Backtrack: 
    - If none of the options work out, backtrack to the previous decision point and try a different path.
+
+### Example Problem
+[17. Letter Combinations of a Phone Number](LeetCode75/Backtracking/_17_Letter_Combinations_of_a_Phone_Number.java)
