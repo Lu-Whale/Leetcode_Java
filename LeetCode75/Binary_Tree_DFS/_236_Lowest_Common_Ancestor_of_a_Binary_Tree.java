@@ -40,7 +40,7 @@ public class _236_Lowest_Common_Ancestor_of_a_Binary_Tree {
         if(dfs(root.left, target, path) || dfs(root.right, target, path)) {
             return true;
         }
-        // if current node is not the in the path from root to target, then delete the node and rollback
+        // if current node is not the in the path from root to target, then delete the node and backtrack
         path.remove(path.size() -1);
         return false;
     }
