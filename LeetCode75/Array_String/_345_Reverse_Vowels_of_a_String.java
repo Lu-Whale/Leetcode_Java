@@ -8,7 +8,17 @@ import java.util.Stack;
 // https://leetcode.com/problems/reverse-vowels-of-a-string/?envType=study-plan-v2&envId=leetcode-75
 public class _345_Reverse_Vowels_of_a_String {
     public static String reverseVowels(String s) {
-        HashSet<Character> hashSet = new HashSet<>(List.of('a','e','i','o','u','A','E','I','O','U'));
+        HashSet<Character> hashSet = new HashSet<>();
+        hashSet.add('a');
+        hashSet.add('e');
+        hashSet.add('i');
+        hashSet.add('o');
+        hashSet.add('u');
+        hashSet.add('A');
+        hashSet.add('E');
+        hashSet.add('I');
+        hashSet.add('O');
+        hashSet.add('U');
 
         // add all vowels into stack
         Stack<Character> stack = new Stack<>();

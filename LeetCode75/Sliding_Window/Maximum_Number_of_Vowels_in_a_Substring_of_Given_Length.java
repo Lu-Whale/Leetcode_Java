@@ -27,7 +27,12 @@ import java.util.Set;
 
 public class Maximum_Number_of_Vowels_in_a_Substring_of_Given_Length {
     public int mySolution(String s, int k) {
-        HashSet<Character> vowel = new HashSet<>(Set.of('a', 'e', 'i', 'o', 'u'));
+        HashSet<Character> vowel = new HashSet<>();
+        vowel.add('a');
+        vowel.add('e');
+        vowel.add('i');
+        vowel.add('o');
+        vowel.add('u');
 
         int count = 0;
         for(int i = 0; i < k; i++) {
@@ -54,7 +59,12 @@ public class Maximum_Number_of_Vowels_in_a_Substring_of_Given_Length {
     }
 
     public int maxVowels(String s, int k) {
-        Set<Character> vowels = new HashSet<>(Set.of('a', 'e', 'i', 'o', 'u'));
+        Set<Character> vowels = new HashSet<>();
+        vowels.add('a');
+        vowels.add('e');
+        vowels.add('i');
+        vowels.add('o');
+        vowels.add('u');
 
         int count = 0, maxCount = 0;
         for (int i = 0; i < s.length(); i++) {
