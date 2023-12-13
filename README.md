@@ -158,3 +158,12 @@ How backtracking works:
 
 ### Example Problem
 [17. Letter Combinations of a Phone Number](LeetCode75/Backtracking/_17_Letter_Combinations_of_a_Phone_Number.java)
+
+## Prefix sum with Hashmap
+1. We know the sum of subarray at interval(i,j) can be got by sum[j] - sum[i] = SumOfSubArray
+2. Then we just need to use hashmap to store how many sum[i] satisfied this equation when iterate to j
+3. Note that be careful the edge case where sum[j] should include the element j and sum[i] should exclude the element i when calculate the exact interval from i to j, but sometimes it can be simplified since it same as sum[j] - sum[i-1]
+
+### Example Problem
+[930. Binary Subarrays With Sum](Problem_List/_930_Binary_Subarrays_With_Sum.java)
+[560. Subarray Sum Equals K](Problem_List/_560_Subarray_Sum_Equals_K.java)
