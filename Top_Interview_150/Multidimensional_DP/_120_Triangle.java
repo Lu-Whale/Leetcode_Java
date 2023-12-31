@@ -23,6 +23,28 @@ public class _120_Triangle {
         dfs(row + 1, triangle, pathSum, index);
         dfs(row + 1, triangle, pathSum, index+1);
     }
+
+//    https://leetcode.cn/problems/triangle/solutions/23146/di-gui-ji-yi-hua-sou-suo-zai-dao-dp-by-crsm/
+//    int row;
+//    Integer[][] memo;
+//
+//    public int minimumTotal(List<List<Integer>> triangle) {
+//        row = triangle.size();
+//        memo = new Integer[row][row];
+//        return helper(0,0, triangle);
+//    }
+//    private int helper(int level, int c, List<List<Integer>> triangle){
+//        // System.out.println("helper: level="+ level+ " c=" + c);
+//        if (memo[level][c]!=null)
+//            return memo[level][c];
+//        if (level==row-1){
+//            return memo[level][c] = triangle.get(level).get(c);
+//        }
+//        int left = helper(level+1, c, triangle);
+//        int right = helper(level+1, c+1, triangle);
+//        return memo[level][c] = Math.min(left, right) + triangle.get(level).get(c);
+//    }
+
 }
 
 class Solution {
