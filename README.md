@@ -50,6 +50,12 @@
    - Special cases when the array is empty or has only one element.
    - Handling when the target value is less than all elements in the array or greater than all of them.
 
+### Tips:
+1. Careful define left and right boundary may handle the edge cases, for example, if index 0 and index n-1 are not the answers, we can initial left = 1, right = n-2
+
+### Example Problem 
+   - [852. Peak Index in a Mountain Array](Problem_List/_852_Peak_Index_in_a_Mountain_Array.java)
+
 ## Priority Queue
 
 #### An unbounded priority queue based on a priority heap. The elements of the priority queue are ordered according to their natural ordering, or by a Comparator provided at queue construction time, depending on which constructor is used. A priority queue does not permit null elements. A priority queue relying on natural ordering also does not permit insertion of non-comparable objects (doing so may result in ClassCastException).
