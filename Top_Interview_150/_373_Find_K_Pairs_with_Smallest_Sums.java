@@ -1,7 +1,8 @@
 package Top_Interview_150;
 
 import java.util.*;
-
+// 多路归并
+// https://leetcode.com/problems/find-k-pairs-with-smallest-sums/description/?envType=study-plan-v2&envId=top-interview-150
 public class _373_Find_K_Pairs_with_Smallest_Sums {
     public static List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
         int n1 = nums1.length, n2 = nums2.length;
