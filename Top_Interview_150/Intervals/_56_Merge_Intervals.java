@@ -1,10 +1,7 @@
 package Top_Interview_150.Intervals;
 
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
 
 // https://leetcode.com/problems/merge-intervals/description/?envType=study-plan-v2&envId=top-interview-150
 public class _56_Merge_Intervals {
