@@ -5,6 +5,7 @@
 
 - Leetcode75
 - Top Interview 150
+- SQL 50 
 - Problem List
 
 
