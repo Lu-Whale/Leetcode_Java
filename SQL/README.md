@@ -1,5 +1,4 @@
 # MySQL Notes:
-
 1. IFNULL()
 2. CHAR_LENGTH(content) > 15 
 3. 当使用 UNION 来合并两个带有 ORDER BY 或 LIMIT 子句的查询时，需要为每个查询加上括号。(1341)
@@ -33,7 +32,12 @@
 9. RANK(): The RANK() function provides a unique rank number to each row within a partition, with gaps in the ranking sequence when there are ties. 
    - RANK() OVER (ORDER BY column_name)
 10. DENSE_RANK(): Similar to RANK(), DENSE_RANK() provides a rank number to each row within a partition, but without gaps in the rank values. 
-   - DENSE_RANK() OVER (ORDER BY column_name)
+    - DENSE_RANK() OVER (ORDER BY column_name)
+11. IF(condition, true_value, false_value)
+12. expression BETWEEN low_value AND high_value
+13. AVG(rating < 3) means the percentage of rows which rating is less than 3
+14. GROUP BY: 查询中的所有非聚合列必须出现在 GROUP BY 子句中
+15. SELECT ROUND(COUNT(*) / **(SELECT COUNT(DISTINCT player_id) FROM Activity)**, 2) AS fraction
 
 ## DATE
 1. CURRENT_TIME() / CURTIME()
