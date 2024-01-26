@@ -1,8 +1,7 @@
 # MySQL Notes:
 
 1. IFNULL()
-2. CHAR_LENGTH(content) > 15
-2. AVG()
+2. CHAR_LENGTH(content) > 15 
 3. 当使用 UNION 来合并两个带有 ORDER BY 或 LIMIT 子句的查询时，需要为每个查询加上括号。(1341)
     - 这是因为 ORDER BY 和 LIMIT 子句适用于整个合并后的结果集，除非它们被包含在子查询中。在您的查询中，每个部分都有自己的 ORDER BY 和 LIMIT 子句，这意味着这些子句只应该影响它们各自的查询结果，而不是整个合并后的结果集。
 4. LAG(column_name, offset, default_value) OVER ([PARTITION BY partition_column] ORDER BY order_column)
@@ -35,3 +34,47 @@
    - RANK() OVER (ORDER BY column_name)
 10. DENSE_RANK(): Similar to RANK(), DENSE_RANK() provides a rank number to each row within a partition, but without gaps in the rank values. 
    - DENSE_RANK() OVER (ORDER BY column_name)
+
+## DATE
+1. CURRENT_TIME() / CURTIME()
+2. CURRENT_TIMESTAMP() / NOW()
+3. DATE_ADD(date, INTERVAL expr unit)
+4. DATE_SUB(date, INTERVAL expr unit)
+5. DATEDIFF(expr1, expr2) 返回两个日期之间的天数差。
+6. DATE_FORMAT(date,format) 按照指定格式显示日期。
+
+## Aggregate Function
+1. COUNT(expression)
+2. SUM(column)
+3. AVG(column)
+4. MAX(column)
+5. MIN(column)
+6. GROUP_CONCAT(column ORDER BY column SEPARATOR 'separator')
+7. STD(column) / STDDEV(column)
+8. VARIANCE(column) / VAR_POP(column) / VAR_SAMP(column)
+
+## Window Function
+#### Syntax: OVER ( [PARTITION BY col1, col2, ...] [ORDER BY col1, col2, ...] [frame_clause] )
+  - PARTITION BY: Optional, specifies data partitions within the window function. 
+  - ORDER BY: Optional, orders the rows within each partition. 
+  - frame_clause: Optional, defines the size and range of the window.
+
+#### Aggregate Window Functions:
+1. SUM() OVER(...): 计算分区内所有行的总和。 
+2. AVG() OVER(...): 计算分区内所有行的平均值。 
+3. COUNT() OVER(...): 计算分区内的行数。 
+4. MAX() OVER(...): 计算分区内所有行的最大值。 
+5. MIN() OVER(...): 计算分区内所有行的最小值。
+
+#### Ranking Window Functions:
+1. ROW_NUMBER() OVER(...): 为分区内的每行分配一个唯一的序号。 
+2. RANK() OVER(...): 根据指定的排序顺序，为分区内的行分配排名，相同值会有相同的排名，并在下一个值上留下间隔。 
+3. DENSE_RANK() OVER(...): 类似于 RANK()，但排名之间没有间隔。 
+4. NTILE(n) OVER(...): 将分区内的行分成 n 个相等的组，并为每一组分配一个组号。
+
+#### Analytic Window Functions:
+1. LEAD(column, n, default) OVER(...): 返回当前行后面第 n 行的值（向前看）。
+2. LAG(column, n, default) OVER(...): 返回当前行前面第 n 行的值（向后看）。 
+3. FIRST_VALUE(column) OVER(...): 返回分区内第一行的值。 
+4. LAST_VALUE(column) OVER(...): 返回分区内最后一行的值。 
+5. CUME_DIST() OVER(...): 计算累积分布。
