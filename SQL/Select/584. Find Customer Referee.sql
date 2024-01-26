@@ -1,3 +1,5 @@
+Create table If Not Exists Customer (id int, name varchar(25), referee_id int);
+
 # https://leetcode.com/problems/find-customer-referee/description/?envType=study-plan-v2&envId=top-sql-50
 SELECT name
 FROM Customer

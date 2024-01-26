@@ -1,6 +1,7 @@
 # MySQL Notes:
 
 1. IFNULL()
+2. CHAR_LENGTH(content) > 15
 2. AVG()
 3. 当使用 UNION 来合并两个带有 ORDER BY 或 LIMIT 子句的查询时，需要为每个查询加上括号。(1341)
     - 这是因为 ORDER BY 和 LIMIT 子句适用于整个合并后的结果集，除非它们被包含在子查询中。在您的查询中，每个部分都有自己的 ORDER BY 和 LIMIT 子句，这意味着这些子句只应该影响它们各自的查询结果，而不是整个合并后的结果集。
