@@ -26,7 +26,7 @@
 ### Tips:
 - Add extra spaces for dp array to handle edge cases without additional check.
   - int[ ] dp = new int[n + 2];
-- Transtion Equation could be more than one, depending on different situation need to be considered.
+- Transition Equation could be more than one, depending on different situation need to be considered.
   - Refer to 1143, there are two parts to the transition equation, depending on whether the current characters being considered are the same or not.
 ### Example Problem
   - [300. Longest Increasing Subsequence](LeetCode75/DP_1D/_300_LongestIncreasingSubsequence.java)
