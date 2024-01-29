@@ -1,4 +1,4 @@
-package Top_Interview_150;
+package Top_Interview_150.Array_String;
 
 public class _134_Gas_Station {
     public static int canCompleteCircuit(int[] gas, int[] cost) {
