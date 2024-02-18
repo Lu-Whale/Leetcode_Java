@@ -3,35 +3,31 @@ package Algorithms;
 import java.util.Arrays;
 import java.util.Random;
 
-class QuickSort {
-    /* 该方法接受一个数组以及数组的起始和结束索引作为参数，对指定范围的数组进行排序 */
-    void quickSort(int[] nums, int l, int r) {
-        // 子数组长度为 1 时终止递归
-        if (l >= r) return;
-        // 哨兵划分操作
-        int i = partition(nums, l, r);
-        // 递归左（右）子数组执行哨兵划分
-        quickSort(nums, l, i - 1);
-        quickSort(nums, i + 1, r);
+public class QuickSort {
+    public void quickSort(int[] arr, int left, int right) {
+        if(left < right) {
+            int partitionIndex = partition(arr, left, right);
+            quickSort(arr, left, partitionIndex - 1);
+            quickSort(arr, partitionIndex + 1, right);
+        }
     }
 
-    int partition(int[] nums, int l, int r) {
-        // 以 nums[l] 作为基准数
-        int i = l, j = r;
+    public int partition(int[] arr, int left, int right) {
+        int i = left, j = right;
+
         while (i < j) {
-            while (i < j && nums[j] >= nums[l]) j--;
-            while (i < j && nums[i] <= nums[l]) i++;
-            swap(nums, i, j);
+            while (i < j && arr[j] >= arr[left]) j--;
+            while (i < j && arr[i] >= arr[left]) i++;
+            swap(arr, i, j);
         }
-        swap(nums, i, l);
+        swap(arr, i, left);
         return i;
     }
 
-    void swap(int[] nums, int i, int j) {
-        // 交换 nums[i] 和 nums[j]
-        int tmp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = tmp;
+    private void swap(int[] arr, int i, int j) {
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
     }
 
     // 主方法来测试排序算法
