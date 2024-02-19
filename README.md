@@ -8,6 +8,7 @@
 - SQL 50 
 - Problem List
 
+---
 
 # Note:
 
@@ -30,6 +31,8 @@
   - Refer to 1143, there are two parts to the transition equation, depending on whether the current characters being considered are the same or not.
 ### Example Problem
   - [300. Longest Increasing Subsequence](LeetCode75/DP_1D/_300_LongestIncreasingSubsequence.java)
+
+---
 
 ## Binary Search
 
@@ -56,6 +59,8 @@
 
 ### Example Problem 
    - [852. Peak Index in a Mountain Array](Problem_List/_852_Peak_Index_in_a_Mountain_Array.java)
+
+---
 
 ## Priority Queue
 
@@ -111,6 +116,8 @@ PriorityQueue<Person> personPriorityQueue = new PriorityQueue<>(Comparator.compa
 ```
 Here, the PriorityQueue will sort Person objects based on their age. A Person with a lower age returned by the getAge method will be considered to have a higher priority in the queue.
 
+---
+
 ## Merge sort
 #### Merge sort is a divide-and-conquer algorithm, Here's a simple explanation of how it works:
 
@@ -120,6 +127,8 @@ Here, the PriorityQueue will sort Person objects based on their age. A Person wi
 
 ### Example Problem
 [148. Sort List](Problem_List/_148_Sort_List.java) 
+
+---
 
 ## Deep First Search
 
@@ -148,6 +157,8 @@ Here, the PriorityQueue will sort Person objects based on their age. A Person wi
 ### Example Problem
 [1372. Longest ZigZag Path in a Binary Tree](LeetCode75/Binary_Tree_DFS/_1372_Longest_ZigZag_Path_in_a_Binary_Tree.java)
 
+---
+
 ## Backtracking
 
 #### Backtracking used for finding solutions to problems incrementally, one step at a time, and removing those solutions that fail to satisfy the constraints of the problem at any point of time.
@@ -166,6 +177,8 @@ How backtracking works:
 ### Example Problem
 [17. Letter Combinations of a Phone Number](LeetCode75/Backtracking/_17_Letter_Combinations_of_a_Phone_Number.java)
 
+---
+
 ## Prefix sum with Hashmap
 1. We know the sum of subarray at interval(i,j) can be got by sum[j] - sum[i] = SumOfSubArray
 2. Then we just need to use hashmap to store how many sum[i] satisfied this equation when iterate to j
@@ -174,3 +187,32 @@ How backtracking works:
 ### Example Problem
 [930. Binary Subarrays With Sum](Problem_List/_930_Binary_Subarrays_With_Sum.java)
 [560. Subarray Sum Equals K](Problem_List/_560_Subarray_Sum_Equals_K.java)
+
+---
+
+## Graph
+
+### Topological sorting
+Topological sorting is an algorithm applied to Directed Acyclic Graphs (DAGs) that produces a linear ordering of all its vertices such that if there is a directed edge from vertex u to vertex v, then u appears before v in the ordering. This is particularly useful in scheduling problems where certain tasks must be performed before others, and there are no cycles in the task dependencies.
+
+There are several algorithms to achieve a topological sort, with Depth-First Search (DFS) being one of the most common. Here's a simplified overview of how the DFS algorithm for topological sorting might work:
+1. Pick an unvisited node.
+2. Beginning with the selected node, perform a DFS according to the graph's edges. 
+3. On reaching a node with no unvisited outgoing edges (a leaf node), add the node to the front of a list. 
+4. Continue until all nodes have been visited and added to the list. 
+5. The resulting list is a topological order of the graph's vertices.
+
+#### Example Problem: [207. Course Schedule](Top_Interview_150/Graph_General/_207_Course_Schedule.java)
+
+### Union-Find (Disjoint Set Union (DSU))
+Union-Find, is a data structure that provides an efficient way to keep track of a set of elements partitioned into a number of disjoint (non-overlapping) subsets. It's particularly useful for dealing with problems related to network connectivity, finding connected components in graphs, and many other applications where groups of items need to be dynamically combined and queried for whether they are in the same group or not.
+
+The core operations of DSU are find and union:
+- **Find**: Determines which subset a particular element is in. This operation can be used for determining if two elements are in the same subset.
+- Union: Joins two subsets into a single subset. This operation is used to merge two sets together.
+
+The efficiency of DSU comes from two optimizations:
+- Path Compression: During a find operation, the path of nodes visited is compressed to point directly to the root node. This drastically reduces the time complexity for subsequent find operations.
+- Union by Rank or Size: When performing a union operation, the smaller set (by rank or size) is merged into the larger set. This helps to keep the tree flat, improving the time complexity of future operations.
+
+#### Implementation: [Union Find](Algorithms/UnionFind.java)
