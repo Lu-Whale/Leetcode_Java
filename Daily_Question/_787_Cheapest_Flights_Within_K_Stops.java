@@ -1,4 +1,4 @@
-package Daily_Qustion;
+package Daily_Question;
 
 import java.util.Arrays;
 import java.util.HashMap;
