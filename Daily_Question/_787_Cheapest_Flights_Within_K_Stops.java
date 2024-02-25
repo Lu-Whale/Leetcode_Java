@@ -1,9 +1,6 @@
 package Daily_Question;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class _787_Cheapest_Flights_Within_K_Stops {
 
@@ -58,7 +55,7 @@ public class _787_Cheapest_Flights_Within_K_Stops {
         System.out.println(a.findCheapestPrice(n, flights, src, dst, k));
     }
 }
-class Solution {
+class Solution_787_Dijkstra {
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
         // Build the graph
         int[][] mat = new int[n][n];
@@ -100,6 +97,58 @@ class Solution {
                 }
             }
         }
+        return -1;
+    }
+}
+
+// track the path
+class Solution_787_Dijkstra_withPathTracking {
+    public int findCheapestPrice(int n, int[][] flights, int src, int dst, int K) {
+        // 构建图
+        int[][] graph = new int[n][n];
+        for (int[] flight : flights) {
+            graph[flight[0]][flight[1]] = flight[2];
+        }
+
+        // 优先队列
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
+        pq.offer(new int[]{src, 0, K + 1});
+
+        // 成本数组和前驱顶点数组
+        int[] cost = new int[n];
+        Arrays.fill(cost, Integer.MAX_VALUE);
+        cost[src] = 0;
+        int[] prev = new int[n];
+        Arrays.fill(prev, -1);
+
+        while (!pq.isEmpty()) {
+            int[] current = pq.poll();
+            int vertex = current[0], price = current[1], stops = current[2];
+
+            if (vertex == dst) {
+                // 重建路径
+                List<Integer> path = new ArrayList<>();
+                for (int at = dst; at != -1; at = prev[at]) {
+                    path.add(at);
+                }
+                Collections.reverse(path);
+                System.out.println("Path: " + path);
+                return price;
+            }
+            if (stops > 0) {
+                for (int nextVertex = 0; nextVertex < n; ++nextVertex) {
+                    if (graph[vertex][nextVertex] > 0) {
+                        int nextPrice = price + graph[vertex][nextVertex];
+                        if (nextPrice < cost[nextVertex]) {
+                            pq.offer(new int[]{nextVertex, nextPrice, stops - 1});
+                            cost[nextVertex] = nextPrice;
+                            prev[nextVertex] = vertex; // 更新前驱顶点
+                        }
+                    }
+                }
+            }
+        }
+
         return -1;
     }
 }

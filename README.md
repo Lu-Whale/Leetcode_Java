@@ -216,3 +216,20 @@ The efficiency of DSU comes from two optimizations:
 - Union by Rank or Size: When performing a union operation, the smaller set (by rank or size) is merged into the larger set. This helps to keep the tree flat, improving the time complexity of future operations.
 
 #### Implementation: [Union Find](Algorithms/UnionFind.java)
+
+### Dijkstra Algorithm
+Dijkstra's Algorithm finds the shortest path between a given node (which is called the "source node") and all other nodes in a graph. This algorithm uses the weights of the edges to find the path that minimizes the total distance (weight) between the source node and all other nodes.
+
+This video from YouTube clearly shows [How Dijkstra's Algorithm Works](https://www.youtube.com/watch?v=EFg3u_E6eHU)
+
+Here's a basic outline of how Dijkstra's algorithm works:
+1. Initialization: Start with the initial node and assign it a tentative distance of 0. For all other nodes, set the initial distance to infinity. Set the initial node as current.
+2. Visiting Neighbors: Update the tentative distance to every neighboring node of the current node. The tentative distance is the sum of the current node's distance and the edge weight between the current node and the neighbor. If this distance is less than the previously recorded tentative distance, update it.
+3. Marking Node as Visited: Once all neighbors have been visited, mark the current node as visited. A visited node will not be checked again.
+4. Selecting the Next Node: Choose the unvisited node with the lowest tentative distance as the next "current node" and repeat the process from step 2.
+5. Termination: The algorithm terminates when all nodes have been visited. At this point, the shortest path from the initial node to all other nodes has been determined.
+
+
+
+#### Example Problem:
+[787. Cheapest Flights Within K Stops](Daily_Question/_787_Cheapest_Flights_Within_K_Stops.java)
