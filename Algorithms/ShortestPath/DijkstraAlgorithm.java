@@ -1,7 +1,8 @@
-package Algorithms;
+package Algorithms.ShortestPath;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
+// Shortest path from one node to all nodes
 public class DijkstraAlgorithm {
 
     // 定义一个类来表示顶点和它的最短距离
@@ -20,7 +21,7 @@ public class DijkstraAlgorithm {
         }
     }
 
-    public void dijkstra(int[][] graph, int src) {
+    public int[] dijkstra(int[][] graph, int src) {
         int V = graph.length;
         int[] dist = new int[V]; // 存储最短路径的数组
 
@@ -48,15 +49,7 @@ public class DijkstraAlgorithm {
             }
         }
 
-        // 打印最短路径结果
-        printSolution(dist);
-    }
-
-    // 打印结果的方法
-    public void printSolution(int[] dist) {
-        System.out.println("Vertex\t\t Distance from Source");
-        for (int i = 0; i < dist.length; i++)
-            System.out.println(i + "\t\t " + dist[i]);
+        return dist;
     }
 
     public static void main(String[] args) {
