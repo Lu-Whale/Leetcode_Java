@@ -185,10 +185,12 @@ How backtracking works:
 3. Note that be careful the edge case where sum[j] should include the element j and sum[i] should exclude the element i when calculate the exact interval from i to j, but sometimes it can be simplified since it same as sum[j] - sum[i-1]
 
 ### Example Problem
-[930. Binary Subarrays With Sum](Problem_List/_930_Binary_Subarrays_With_Sum.java)
-[560. Subarray Sum Equals K](Problem_List/_560_Subarray_Sum_Equals_K.java)
-[1171. Remove Zero Sum Consecutive Nodes from Linked List](Daily_Question/_1171_Remove_Zero_Sum_Consecutive_Nodes_from_Linked_List.java)
-[930. Binary Subarrays With Sum](Daily_Question/_930_Binary_Subarrays_With_Sum.java)
+- [930. Binary Subarrays With Sum](Problem_List/_930_Binary_Subarrays_With_Sum.java)
+- [560. Subarray Sum Equals K](Problem_List/_560_Subarray_Sum_Equals_K.java)
+- [1171. Remove Zero Sum Consecutive Nodes from Linked List](Daily_Question/_1171_Remove_Zero_Sum_Consecutive_Nodes_from_Linked_List.java)
+- [930. Binary Subarrays With Sum](Daily_Question/_930_Binary_Subarrays_With_Sum.java)
+- [525. Contiguous Array](Daily_Question/_525_Contiguous_Array.java)
+
 ---
 
 ## Graph
