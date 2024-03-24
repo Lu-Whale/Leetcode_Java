@@ -1,4 +1,4 @@
-package Problem_List;
+package Contest;
 
 import java.util.HashSet;
 
