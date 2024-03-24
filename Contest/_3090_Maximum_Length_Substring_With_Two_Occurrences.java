@@ -4,9 +4,8 @@ import java.util.HashMap;
 
 public class _3090_Maximum_Length_Substring_With_Two_Occurrences {
     public int maximumLengthSubstring(String s) {
-        //sliding window
         int res = 2;
-
+        //sliding window
         HashMap<Character, Integer> hashMap = new HashMap<>();
         int left = 0;
         for(int right = 0; right < s.length(); right++) {

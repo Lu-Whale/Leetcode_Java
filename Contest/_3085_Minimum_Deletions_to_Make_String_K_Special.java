@@ -21,7 +21,6 @@ public class _3085_Minimum_Deletions_to_Make_String_K_Special {
             chars[index++] = num;
         }
         Arrays.sort(chars);
-        System.out.println(Arrays.toString(chars));
 
         int preCount = 0;
         for(int i = 0; i < chars.length; i++) {

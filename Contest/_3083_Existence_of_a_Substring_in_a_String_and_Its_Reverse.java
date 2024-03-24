@@ -10,7 +10,6 @@ public class _3083_Existence_of_a_Substring_in_a_String_and_Its_Reverse {
             hashSet.add(s.substring(i, i+2));
         }
 
-
         StringBuilder sb = new StringBuilder();
         for(int i = n - 1; i >= 0; i--) {
             sb.append(s.charAt(i));
