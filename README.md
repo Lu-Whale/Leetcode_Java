@@ -1,4 +1,4 @@
-## Lucas's Leetcode Practice record 😊
+## Lucas's LeetCode Solutions and Reflections 😊
 
 - ✅ I made a java file name generator in the root directory which used to generate the java file name (Since I always copy the problem name from Leetcode and used it as a file name, but it contains space or illegal characters) Feel free to use it :)
 
