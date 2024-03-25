@@ -13,14 +13,23 @@ public class QuickSort {
     }
 
     public int partition(int[] arr, int left, int right) {
+        int pivot = arr[left];
         int i = left, j = right;
 
         while (i < j) {
-            while (i < j && arr[j] >= arr[left]) j--;
-            while (i < j && arr[i] >= arr[left]) i++;
-            swap(arr, i, j);
+            // 先从右边开始找小于pivot的元素
+            while (i < j && arr[j] >= pivot) j--;
+            // 然后从左边开始找大于pivot的元素
+            while (i < j && arr[i] <= pivot) i++;
+            // 找到后进行交换
+            if (i < j) {
+                swap(arr, i, j);
+            }
         }
-        swap(arr, i, left);
+        // 将pivot交换到中间，此时i=j
+        swap(arr, left, i);
+        System.out.println("index: " + i + " | " + "num: " + arr[i]);
+        System.out.println(Arrays.toString(arr));
         return i;
     }
 
@@ -32,7 +41,7 @@ public class QuickSort {
 
     // 主方法来测试排序算法
     public static void main(String[] args) {
-        int[] arr = {10, 7, 8, 9, 1, 5};
+        int[] arr = {3, 10, 3, 8, 9, 1, 5};
         int n = arr.length;
 
         QuickSort ob = new QuickSort();
