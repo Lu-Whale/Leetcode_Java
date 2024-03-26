@@ -26,7 +26,7 @@ public class _3092_Most_Frequent_IDs {
            hashMap.put(num, hashMap.getOrDefault(num, 0L) + k);
            Pair pair = new Pair(num, hashMap.get(num));
            pq.offer(pair);
-           while (!pq.isEmpty() && (hashMap.get(pq.peek().num) != pq.peek().frequency)) {
+           while (!pq.isEmpty() && hashMap.get(pq.peek().num) != pq.peek().frequency) {
                pq.poll();
            }
            res[i] = pq.peek().frequency;
