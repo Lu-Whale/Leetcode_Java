@@ -7,8 +7,6 @@ public class _41_First_Missing_Positive {
     public int firstMissingPositive(int[] nums) {
         int n = nums.length;
 
-        // first, we pick a meaningless number used as flag
-        // in this problem, we aimed to find the positive number, so just use 0
         for(int i = 0; i < n; i++) {
             if(nums[i] == 0) nums[i] = -1;
         }
