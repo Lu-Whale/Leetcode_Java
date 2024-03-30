@@ -236,3 +236,20 @@ Here's a basic outline of how Dijkstra's algorithm works:
 
 #### Example Problem:
 [787. Cheapest Flights Within K Stops](Daily_Question/_787_Cheapest_Flights_Within_K_Stops.java)
+
+
+## Sliding Window
+### how the sliding window works:
+1. Initialization: Start with two pointers or indices that represent the window's edges (usually called left and right). The window size can be fixed or variable depending on the problem.
+2. Expand the Window: Move the right pointer to the right (increment it) to expand the window until you meet the specific condition of your problem.
+3. Shrink the Window: Once the condition is met, you can try to shrink the window from the left by moving the left pointer to the right (increment it). The goal here is to find the smallest or optimal window that meets the condition. Whether you can or should shrink the window depends on the problem requirements.
+4. Update and Record Solutions: As you expand or shrink the window, update any necessary variables or records that pertain to the solution of the problem. For example, if you're looking for the maximum sum, keep track of the maximum sum encountered so far.
+5. Repeat: Continue expanding and shrinking the window as needed until you've considered all possible relevant windows in the list or array.
+
+### Tips:
+In each iteration of the sliding window, there are two situation:
+1. left boundary can be slided and right boundary is fixed
+   - Example Problem: [2958. Length of Longest Subarray With at Most K Frequency](Daily_Question/_2958_Length_of_Longest_Subarray_With_at_Most_K_Frequency.java)
+2. right boundary can be slided and left boundary is fixed
+   - Example Problem: [76 Minimum Window Substring](Top_Interview_150/Sliding_Window/_76_Minimum_Window_Substring.java)
+
