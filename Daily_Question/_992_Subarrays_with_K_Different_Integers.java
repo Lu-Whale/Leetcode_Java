@@ -48,7 +48,7 @@ public class _992_Subarrays_with_K_Different_Integers {
     }
 }
 
-public class Solution {
+class Solution_992 {
 
     public int subarraysWithKDistinct(int[] A, int K) {
         return atMostKDistinct(A, K) - atMostKDistinct(A, K - 1);
