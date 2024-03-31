@@ -249,7 +249,7 @@ Here's a basic outline of how Dijkstra's algorithm works:
 ### Tips:
 In each iteration of the sliding window, there are two situation:
 1. left boundary can be slided and right boundary is fixed
-   - Detailed, everytime when right boundary is reached to limited, 'res += right - left' means how many possible substrings exists where those substrings is ended with the element nums[right]
+   - Detailed, everytime when right boundary is reached to limited, such as 'res += hashMap.get(left) - left' means how many possible substrings exists where those substrings is ended with the element nums[right]
    - Example Problem: [2958. Length of Longest Subarray With at Most K Frequency](Daily_Question/_2958_Length_of_Longest_Subarray_With_at_Most_K_Frequency.java)
 2. right boundary can be slided and left boundary is fixed
    - Example Problem: [76 Minimum Window Substring](Top_Interview_150/Sliding_Window/_76_Minimum_Window_Substring.java)
