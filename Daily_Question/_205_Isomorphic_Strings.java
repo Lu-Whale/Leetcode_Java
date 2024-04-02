@@ -21,7 +21,6 @@ public class _205_Isomorphic_Strings {
                 }
             }
         }
-
         return true;
     }
 }
