@@ -7,14 +7,9 @@ public class _42_Trapping_Rain_Water {
         int[] right = new int[n];
         int leftMax = 0, rightMax = 0;
         for(int i = 0; i < n; i++) {
-            if(i == 0) {
-                left[i] = 0;
-                right[n - i - 1] = 0;
+            left[i] = leftMax;
+            right[n - i - 1] = rightMax;
 
-            }else {
-                left[i] = leftMax;
-                right[n - i - 1] = rightMax;
-            }
             leftMax = Math.max(leftMax, height[i]);
             rightMax = Math.max(rightMax, height[n - i - 1]);
         }
