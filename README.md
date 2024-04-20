@@ -254,3 +254,44 @@ In each iteration of the sliding window, there are two situation:
 2. right boundary can be slided and left boundary is fixed
    - Example Problem: [76 Minimum Window Substring](Top_Interview_150/Sliding_Window/_76_Minimum_Window_Substring.java)
 
+---
+
+## Bit manipulation
+1. Bitwise AND (&): This operation results in a bit pattern where the bits of the result are set to 1 if and only if the corresponding bits of both operands are 1.
+    ```
+    int a = 12; // 1100 in binary
+    int b = 10; // 1010 in binary
+    int result = a & b; // 1000 in binary, which is 8
+    ```
+2. Bitwise OR (|): This operation results in a bit pattern where the bits of the result are set to 1 if either or both of the corresponding bits of the operands are 1.
+    ```
+    int a = 12; // 1100 in binary
+    int b = 10; // 1010 in binary
+    int result = a | b; // 1110 in binary, which is 14
+    ```
+3. Bitwise XOR (^): This operation results in a bit pattern where the bits of the result are set to 1 if the corresponding bits of the operands are different.
+    ```
+    int a = 12; // 1100 in binary
+    int b = 10; // 1010 in binary
+    int result = a ^ b; // 0110 in binary, which is 6
+    ```
+4. Bitwise NOT (~): This is a unary operation that flips the bits of the operand.
+    ```
+    int a = 12; // 1100 in binary
+    int result = ~a; // In a 32-bit system, it results in 11111111 11111111 11111111 11110011
+    ```
+5. Left Shift (<<): This shifts the bits of the operand to the left by a specified number of positions, filling the new bits on the right with zeros. It effectively multiplies the number by 2^n.
+    ```
+    int a = 3; // 11 in binary
+    int result = a << 2; // 1100 in binary, which is 12
+    ```
+6. Right Shift (>>): This shifts the bits of the operand to the right by a specified number of positions. If the number is positive, the leftmost bits are filled with the original leftmost bit (sign bit). If the number is negative, the leftmost bits are filled with zeros.
+    ```
+    int a = -8; // 11111111 11111111 11111111 11111000 in binary
+    int result = a >> 2; // 11111111 11111111 11111111 11111110 in binary, which is -2
+    ```
+7. Unsigned Right Shift (>>>): This shifts the bits of the operand to the right by a specified number of positions, filling the leftmost bits with zeros regardless of the sign of the original number.
+    ```
+    int a = -8; // 11111111 11111111 11111111 11111000 in binary
+    int result = a >>> 2; // 00111111 11111111 11111111 11111110 in binary
+    ```
