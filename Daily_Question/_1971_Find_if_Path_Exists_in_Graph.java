@@ -3,12 +3,12 @@ package Daily_Question;
 import java.util.*;
 
 public class _1971_Find_if_Path_Exists_in_Graph {
-    int[] parent;
-    int[] rank;
-
+    int parent[];
+    int rank[];
     public boolean validPath(int n, int[][] edges, int source, int destination) {
         parent = new int[n];
         rank = new int[n];
+
         for(int i = 0; i < n; i++) {
             parent[i] = i;
             rank[i] = 0;
@@ -18,20 +18,13 @@ public class _1971_Find_if_Path_Exists_in_Graph {
             union(edge[0], edge[1]);
         }
 
-        return isConnected(source, destination);
-    }
-//    public int find(int p) {
-//        while (p != parent[p]) {
-//            parent[p] = parent[parent[p]];
-//            p = parent[p];
-//        }
-//        return p;
-//    }
+        return find(source) == find(destination);
 
-    // find the root of node p
-    private int find(int p) {
-        if (parent[p] != p) {
-            parent[p] = find(parent[p]); // Path compression
+    }
+    // Path compression
+    public int find(int p) {
+        if(p != parent[p]) {
+            parent[p] = find(parent[p]);
         }
         return parent[p];
     }
@@ -40,20 +33,15 @@ public class _1971_Find_if_Path_Exists_in_Graph {
         int rootP = find(p);
         int rootQ = find(q);
 
-        if(rank[p] < rank[q]) {
+        if(rank[rootP] > rank[rootQ]) {
+            parent[rootQ] = rootP;
+        }else if(rank[rootP] < rank[rootQ]) {
             parent[rootP] = rootQ;
-        }else if(rank[p] > rank[q]) {
-            parent[rootQ] = rootP;
         }else {
-            parent[rootQ] = rootP;
-            rank[rootP] += 1;
+            parent[rootP] = rootQ;
+            rank[rootQ] += 1;
         }
     }
-
-    public boolean isConnected(int p, int q) {
-        return find(p) == find(q);
-    }
-
 }
 
 
