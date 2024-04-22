@@ -36,20 +36,14 @@ public class _752_Open_the_Lock {
         return -1;
     }
 
-    public char numPrev(char x) {
-        return x == '0' ? '9' : (char) (x - 1);
-    }
-    public char numSucc(char x) {
-        return x == '9' ? '0' : (char) (x + 1);
-    }
     public List<String> get(String status) {
         List<String> list = new ArrayList<>();
         char[] array = status.toCharArray();
         for(int i = 0; i < 4; i++) {
             char num = array[i];
-            array[i] = numPrev(num);
+            array[i] = num == '0' ? '9' : (char) (num - 1);
             list.add(new String(array));
-            array[i] = numSucc(num);
+            array[i] = num == '0' ? '9' : (char) (num + 1)
             list.add(new String(array));
             array[i] = num;
         }
