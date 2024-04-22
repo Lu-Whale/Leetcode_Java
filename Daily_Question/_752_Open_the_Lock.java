@@ -43,7 +43,7 @@ public class _752_Open_the_Lock {
             char num = array[i];
             array[i] = num == '0' ? '9' : (char) (num - 1);
             list.add(new String(array));
-            array[i] = num == '0' ? '9' : (char) (num + 1)
+            array[i] = num == '0' ? '9' : (char) (num + 1);
             list.add(new String(array));
             array[i] = num;
         }
