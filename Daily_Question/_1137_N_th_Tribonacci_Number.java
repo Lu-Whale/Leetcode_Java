@@ -1,5 +1,7 @@
 package Daily_Question;
 
+import java.util.HashMap;
+
 public class _1137_N_th_Tribonacci_Number {
     public int tribonacci(int n) {
         int t0 = 0;
@@ -20,4 +22,27 @@ public class _1137_N_th_Tribonacci_Number {
         }
         return t2;
     }
+}
+
+class Solution_1137 {
+    public int tribonacci(int n) {
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        return recursion(n, hashMap);
+    }
+
+    public int recursion(int n, HashMap<Integer, Integer> hashMap) {
+        if(hashMap.containsKey(n)) {
+            return hashMap.get(n);
+        }
+
+        if(n == 0) return 0;
+        if(n == 1) return 1;
+        if(n == 2) return 1;
+
+        int num = recursion(n - 1, hashMap) + recursion(n - 2, hashMap) + recursion(n - 3, hashMap);
+        hashMap.put(n, num);
+
+        return num;
+    }
+
 }
