@@ -5,7 +5,7 @@ import java.util.List;
 
 public class _2812_Find_the_Safest_Path_in_a_Grid {
     int n, res;
-    List<int[]> thiefs;
+    List<int[]> thieves;
     boolean[][] visited;
 
     public int maximumSafenessFactor(List<List<Integer>> grid) {
@@ -15,11 +15,11 @@ public class _2812_Find_the_Safest_Path_in_a_Grid {
         }
 
         visited = new boolean[n][n];
-        thiefs = new ArrayList<>();
+        thieves = new ArrayList<>();
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < n; j++) {
                 if(grid.get(i).get(j) == 1) {
-                    thiefs.add(new int[]{i, j});
+                    thieves.add(new int[]{i, j});
                 }
             }
         }
@@ -34,7 +34,7 @@ public class _2812_Find_the_Safest_Path_in_a_Grid {
             return;
         }
 
-        for(int[] thief : thiefs) {
+        for(int[] thief : thieves) {
             distance = Math.min(distance, Math.abs(row - thief[0]) + Math.abs(col - thief[1]));
         }
 
