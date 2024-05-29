@@ -33,4 +33,26 @@ public class binary_decimal_converting {
         System.out.println(binaryString3.toString()); // Outputs 1010
 
     }
+
+    public int binaryStringToInt(String binaryString) {
+        int result = 0;
+        for (int i = 0; i < binaryString.length(); i++) {
+            char c = binaryString.charAt(i);
+            result = result * 2 + (c - '0');  // 将前一个结果左移一位（乘以2），加上当前位的值
+        }
+        return result;
+    }
+
+    public String intToBinaryString(int number) {
+        if (number == 0) return "0";
+        StringBuilder binaryString = new StringBuilder();
+        while (number > 0) {
+            int remainder = number % 2;
+            binaryString.append(remainder);  // 添加二进制位
+            number /= 2;
+        }
+        return binaryString.reverse().toString();  // 反转字符串以获取正确的二进制顺序
+    }
+
+
 }
