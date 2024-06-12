@@ -1,16 +1,33 @@
 ## Lucas's LeetCode Solutions and Reflections 😊
 
-- ✅ I made a java file name generator in the root directory which used to generate the java file name (Since I always copy the problem name from Leetcode and used it as a file name, but it contains space or illegal characters) Feel free to use it :)
-
+- ✅ This repository contains Java solutions for LeetCode problems. I developed a Java filename generator in the root directory to automatically create valid filenames for each solution. This utility addresses the issue of copying problem names directly from LeetCode, which may include spaces or illegal characters. Feel free to use it to streamline your workflow!
 
 - Leetcode75
 - Top Interview 150
 - SQL 50 
 - Problem List
+- Daily Questions
 
 ---
 
 # Note:
+
+## Table of Contents
+- [LeetCode Problem Categories](#leetcode-problem-categories)
+   - [Dynamic Programming (DP)](#dynamic-programming-dp)
+   - [Binary Search](#binary-search)
+   - [Priority Queue](#priority-queue)
+   - [Merge Sort](#merge-sort)
+   - [Deep First Search (DFS)](#deep-first-search)
+   - [Backtracking](#backtracking)
+   - [Prefix Sum with Hashmap](#prefix-sum-with-hashmap)
+   - [Graph](#graph)
+      - [Topological Sorting](#topological-sorting)
+      - [Union-Find (DSU)](#union-find-disjoint-set-union-dsu)
+      - [Dijkstra's Algorithm](#dijkstras-algorithm)
+   - [Sliding Window](#sliding-window)
+   - [Bit Manipulation](#bit-manipulation)
+
 
 ## Dynamic Programing (DP):
 
