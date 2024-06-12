@@ -13,8 +13,7 @@
 # Note:
 
 ## Table of Contents
-- [LeetCode Problem Categories](#leetcode-problem-categories)
-   - [Dynamic Programming (DP)](#dynamic-programming-dp)
+   - [Dynamic Programming (DP)](#dynamic-programming)
    - [Binary Search](#binary-search)
    - [Priority Queue](#priority-queue)
    - [Merge Sort](#merge-sort)
@@ -24,12 +23,12 @@
    - [Graph](#graph)
       - [Topological Sorting](#topological-sorting)
       - [Union-Find (DSU)](#union-find-disjoint-set-union-dsu)
-      - [Dijkstra's Algorithm](#dijkstras-algorithm)
+      - [Dijkstra's Algorithm](#dijkstra-algorithm)
    - [Sliding Window](#sliding-window)
    - [Bit Manipulation](#bit-manipulation)
 
 
-## Dynamic Programing (DP):
+## Dynamic Programming
 
 #### When solving Dynamic Programming (DP) problems, it is usually necessary to follow a series of steps. The following is the general logic for solving DP problems:
 
