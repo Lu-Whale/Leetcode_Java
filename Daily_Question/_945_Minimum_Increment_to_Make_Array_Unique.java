@@ -8,9 +8,9 @@ public class _945_Minimum_Increment_to_Make_Array_Unique {
 
         Arrays.sort(nums);
         for(int i = 1; i < nums.length; i++) {
-            while (nums[i] <= nums[i-1]) {
-                nums[i]++;
-                res++;
+            if (nums[i] <= nums[i-1]) {
+                res += (nums[i-1] + 1 - nums[i]);
+                nums[i] = nums[i-1] + 1;
             }
         }
         return res;
