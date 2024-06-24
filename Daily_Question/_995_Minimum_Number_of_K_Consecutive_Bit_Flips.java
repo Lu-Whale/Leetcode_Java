@@ -3,6 +3,7 @@ package Daily_Question;
 import java.util.Deque;
 import java.util.LinkedList;
 
+// https://leetcode.cn/problems/minimum-number-of-k-consecutive-bit-flips/solutions/607694/hua-dong-chuang-kou-shi-ben-ti-zui-rong-z403l/
 public class _995_Minimum_Number_of_K_Consecutive_Bit_Flips {
     public int minKBitFlips(int[] nums, int k) {
         int res = 0;
