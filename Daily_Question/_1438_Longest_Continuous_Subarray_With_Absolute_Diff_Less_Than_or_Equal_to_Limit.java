@@ -4,7 +4,7 @@ import java.util.TreeMap;
 
 public class _1438_Longest_Continuous_Subarray_With_Absolute_Diff_Less_Than_or_Equal_to_Limit {
     public int longestSubarray(int[] nums, int limit) {
-        TreeMap<Integer, Integer> map = new TreeMap<Integer, Integer>();
+        TreeMap<Integer, Integer> map = new TreeMap<>();
         int n = nums.length;
         int left = 0, right = 0;
         int res = 0;
